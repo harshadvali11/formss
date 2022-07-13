@@ -21,4 +21,7 @@ urlpatterns = [
     path('forms/',forms,name='forms'),
     path('create_topic/',create_topic,name='create_topic'),
     path('create_webpage/',create_webpage,name='create_webpage'),
+    path('select_topic/',select_topic,name='select_topic'),
+
+
 ]

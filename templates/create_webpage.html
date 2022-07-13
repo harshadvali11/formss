@@ -12,7 +12,16 @@
         <form method="POST">
             {% csrf_token %}
             <label for="topic">topicname:</label>
-            <input type="text" name="topic" id="topic"><br>
+            <select name="topic" id="topic">
+                {% for tp in LOT %}
+                    <option value="{{tp}}">{{tp.topic_name}}</option>
+                {% endfor %}
+            </select>
+            
+            <br>
+            
+            
+            
             <label for="name">name:</label>
             <input type="text" name="name" id="name"><br>
         <label for="ul">url:</label>
