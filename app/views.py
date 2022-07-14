@@ -46,7 +46,10 @@ def select_topic(request):
         return render(request,'display_webpages.html',d1)
     return render(request,'select_topic.html',d)
 
-
+def checkbox(request):
+    topics=Topic.objects.all()
+    d={'LOT':topics}
+    return render(request,'checkbox.html',d)
 
 
 
